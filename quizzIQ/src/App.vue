@@ -5,7 +5,7 @@ import CoronaPopup from '@/components/CoronaPopup.vue';
 import PopupFinVidas from '@/components/PopupFinVidas.vue';
 import PopupGanador from '@/components/PopupGanador.vue';
 
-import { Analytics } from '@vercel/analytics';
+import { Analytics } from '@vercel/analytics/react';
 </script>
 
 <template>
