@@ -21,9 +21,7 @@ const emptyRanking = computed(() => {
     return users.value.length === 0
 })
 const myUser = computed(() => {
-    if (users.value) {
-        return users.value.find(user => user.username === partidaStore.partidaData.logedUser.username)
-    }
+    return users.value.find(user => user.username === partidaStore.partidaData.logedUser.username)
 })
 
 </script>
