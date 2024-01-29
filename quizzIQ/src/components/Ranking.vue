@@ -2,7 +2,7 @@
 import { computed, reactive } from 'vue';
 import { usePartidaStore } from '@/stores/partida';
 import { useFirestore, useCollection } from 'vuefire'
-import { collection, query, orderBy, limit } from 'firebase/firestore'
+import { collection, query, orderBy } from 'firebase/firestore'
 
 const partidaStore = usePartidaStore()
 
