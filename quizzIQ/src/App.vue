@@ -5,7 +5,7 @@ import CoronaPopup from '@/components/CoronaPopup.vue';
 import PopupFinVidas from '@/components/PopupFinVidas.vue';
 import PopupGanador from '@/components/PopupGanador.vue';
 
-// import { Analytics } from '@vercel/analytics/react';
+import { Analytics } from '@vercel/analytics/react';
 </script>
 
 <template>
@@ -21,5 +21,5 @@ import PopupGanador from '@/components/PopupGanador.vue';
     <!-- Renderizar el componente PopupGanador -->
     <PopupGanador />
 
-    <!-- <Analytics /> -->
+    <Analytics />
 </template>
