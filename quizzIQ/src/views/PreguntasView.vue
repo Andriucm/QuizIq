@@ -1,4 +1,5 @@
 <script setup>
+// Importacion de los componentes necesarios
 import { ref } from 'vue'
 import { onMounted } from 'vue'
 import { usePreguntasStore } from '@/stores/preguntas';
@@ -6,16 +7,17 @@ import { useContadorStore } from '@/stores/contador'
 import { usePartidaStore } from '@/stores/partida'
 import Contador from '@/components/Contador.vue';
 
-
+// Declaramos los stores que vamos a utilizar
 const preguntasStore = usePreguntasStore();
 const contadorStore = useContadorStore()
 const partidaStore = usePartidaStore();
-
+// Declaramos las variables reactivas
 const pregunta = ref('');
 const opciones = ref([]);
 const categoria = ref('');
 const color = ref('');
 
+// Cuando se monte el componente, asignamos los valores de la pregunta, opciones, categoria y color
 onMounted(() => {
     pregunta.value = partidaStore.partidaData.pregunta;
     opciones.value = partidaStore.partidaData.opciones;
@@ -83,10 +85,12 @@ onMounted(() => {
     justify-content: center;
     text-transform: uppercase;
 }
-.categoria h3{
+
+.categoria h3 {
     color: var(--blanco);
-    
+
 }
+
 .contador {
     font-size: 7rem;
     display: flex;
@@ -163,8 +167,8 @@ main {
     transition: transform 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55);
     box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
     text-shadow: 3px 5px 2px rgba(0, 0, 0, 0.15);
-    
-background-repeat: no-repeat;
+
+    background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
 
@@ -178,12 +182,16 @@ background-repeat: no-repeat;
     transition: all .3s;
 }
 
-.respuesta-incorrecta, .respuesta-incorrecta:hover, .respuesta-incorrecta:active {
+.respuesta-incorrecta,
+.respuesta-incorrecta:hover,
+.respuesta-incorrecta:active {
     background-color: red;
 
 }
 
-.respuesta-correcta, .respuesta-correcta:hover, .respuesta-correcta:active{
+.respuesta-correcta,
+.respuesta-correcta:hover,
+.respuesta-correcta:active {
     background-color: chartreuse;
 
 }
@@ -219,5 +227,4 @@ background-repeat: no-repeat;
 
 .incorrecto {
     color: red;
-}
-</style>
+}</style>

@@ -1,4 +1,5 @@
 <script setup>
+// Importacion de los componentes necesarios
 import { ref, onMounted } from 'vue';
 import { useRouter } from 'vue-router';
 import ProgressBar from '@/components/ProgressBar.vue';
@@ -10,12 +11,15 @@ import { usePartidaStore } from '@/stores/partida'
 
 const router = useRouter();
 
+// Declaramos los stores que vamos a utilizar
 const ruletaStore = useRuletaStore();
 const preguntasStore = usePreguntasStore();
 const partidaStore = usePartidaStore()
 const contadorStore = useContadorStore();
+// Declaramos las variables reactivas
 const wheel = ref(null);
 
+// Cuando se monte la pagina reseteamos los valores de las variables que gestionan la partida¡
 onMounted(() => {
     preguntasStore.opcionesHabilitadas = true
     preguntasStore.respuestaUsuario = null
