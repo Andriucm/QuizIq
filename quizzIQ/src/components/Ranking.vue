@@ -8,7 +8,7 @@ const partidaStore = usePartidaStore()
 
 const db = useFirestore()
 const userCollection = collection(db, 'users')
-const q = query(userCollection, orderBy('puntos', 'desc'), limit(5))
+const q = query(userCollection, orderBy('puntos', 'desc'))
 const users = reactive(useCollection(q))
 
 
