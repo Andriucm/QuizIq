@@ -18,6 +18,8 @@ import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import { faAward } from '@fortawesome/free-solid-svg-icons'
 import { faHeart } from '@fortawesome/free-solid-svg-icons'
+import { inject } from '@vercel/analytics'
+
 library.add(faAward, faHeart)
 
 // Importar el componente de ruleta
@@ -43,6 +45,6 @@ app.component('roulette', Roulette)
 
 // Registrar el componente de icono de Font Awesome
 app.component('font-awesome-icon', FontAwesomeIcon)
-
+inject()
 // Montar la aplicación en el elemento con el id 'app'
 app.mount('#app')
